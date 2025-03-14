@@ -153,10 +153,8 @@ async function handleSignin(event) {
 
     // Return all relevant tokens
     return formatResponse(200, {
-      token: authResponse.AuthenticationResult.IdToken,
-      accessToken: authResponse.AuthenticationResult.AccessToken,
-      refreshToken: authResponse.AuthenticationResult.RefreshToken
-    });
+          idToken: authResponse.AuthenticationResult.IdToken
+        });
 
   } catch (error) {
     console.error("Signin error:", error);
